@@ -1,0 +1,19 @@
+name = "wakumi-bot-status"
+main = "index.js"
+compatibility_date = "2026-10-20"
+
+# เก็บสถานะใน Durable Object (SQLite) — ใช้ได้บนแผนฟรี และเขียนได้ถี่กว่า KV มาก
+[durable_objects]
+bindings = [{ name = "STATUS_HUB", class_name = "StatusHub" }]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["StatusHub"]
+
+[vars]
+# บอทที่ไม่ส่ง Heartbeat เกินกี่วินาทีให้ถือว่า Offline
+OFFLINE_AFTER_SECONDS = "90"
+# เว็บไซต์ที่อนุญาตให้เรียก /api/status (คั่นด้วย , ได้หลายค่า)
+ALLOWED_ORIGINS = "https://wakumi.pages.dev"
+
+# ห้ามใส่ Token/Secret ในไฟล์นี้ — ตั้ง BOT_TOKENS ด้วย: npx wrangler secret put BOT_TOKENS
