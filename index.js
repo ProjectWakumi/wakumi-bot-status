@@ -8,7 +8,7 @@
 import { DurableObject } from "cloudflare:workers";
 
 const DEFAULT_OFFLINE_AFTER_S = 90;
-const DEFAULT_ALLOWED_ORIGINS = ["https://wakumi.pages.dev"];
+const DEFAULT_ALLOWED_ORIGINS = ["https://wakumi.pages.dev/"];
 const MIN_HEARTBEAT_INTERVAL_MS = 5_000; // กันยิงถี่ผิดปกติ (ปกติบอทส่งทุก 20 วินาที)
 const MAX_BODY_BYTES = 2_048;
 const STALE_BOT_DAYS = 365; // บอทที่หายไปเกินนี้จะถูกลบออกจากรายการ (ยาวพอให้เว็บยังขึ้น Offline แทนที่จะกลายเป็น "ตรวจสอบไม่ได้")
