@@ -1,0 +1,17 @@
+{
+  "name": "wakumi-bot-status-api",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Wakumi Bot Status API — Cloudflare Worker + Durable Object รับ Heartbeat จากบอท Discord และให้เว็บไซต์ดึงสถานะออนไลน์/ออฟไลน์",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "smoke": "node smoke.mjs"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^4.151.2"
+  }
+}
