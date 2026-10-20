@@ -16,6 +16,6 @@ OFFLINE_AFTER_SECONDS = "90"
 # เว็บไซต์ที่อนุญาตให้เรียก /api/status (คั่นด้วย , ได้หลายค่า)
 # ต้องตรงกับโดเมนที่ผู้ชมเปิดเว็บจริง (ตัวอย่างหลายโดเมน: "https://wakumi.pages.dev,https://www.example.com")
 # ถ้าโดเมนไม่ตรง เว็บจะขึ้น ⚪ "ไม่สามารถตรวจสอบสถานะได้" เพราะเบราว์เซอร์บล็อกคำขอ
-ALLOWED_ORIGINS = "https://wakumi.pages.dev"
+ALLOWED_ORIGINS = "https://wakumi.pages.dev/"
 
 # ห้ามใส่ Token/Secret ในไฟล์นี้ — ตั้ง BOT_TOKENS ด้วย: npx wrangler secret put BOT_TOKENS
